@@ -9788,6 +9788,28 @@ header.style-7 .main-menu ul li.menu-item-has-children>i {
     transform: translateY(-50%)
 }
 
+.login-area .form-wrapper nav .nav-tabs {
+    justify-content: center;
+    margin-bottom: 40px;
+    border: none;
+    gap: 25px
+}
+
+.login-area .form-wrapper nav .nav-tabs .nav-link {
+    border: 1px solid rgba(0,167,172,.2);
+    border-radius: 50px;
+    padding: 3px 43px;
+    font-family: var(--font-work-sans);
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--title-color1)
+}
+
+.login-area .form-wrapper nav .nav-tabs .nav-link.active {
+    background-color: var(--primary-color1);
+    color: var(--white)
+}
+
 .register-area .form-wrapper {
     max-width: 770px;
     width: 100%;
