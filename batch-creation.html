@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -36,8 +35,247 @@
 		<link rel="stylesheet" href="assets/css/jquery-ui.css" />
 
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<style type="text/css">
+			.lf-progress {
+				-webkit-appearance: none;
+				-moz-apperance: none;
+				width: 100%;
+				/* margin: 0 10px; */
+				height: 4px;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+			.lf-progress:focus {
+				outline: none;
+				border: none;
+			}
+			.lf-progress::-moz-range-track {
+				cursor: pointer;
+				background: none;
+				border: none;
+				outline: none;
+			}
+			.lf-progress::-webkit-slider-thumb {
+				-webkit-appearance: none !important;
+				height: 13px;
+				width: 13px;
+				border: 0;
+				border-radius: 50%;
+				background: #0fccce;
+				cursor: pointer;
+			}
+			.lf-progress::-moz-range-thumb {
+				-moz-appearance: none !important;
+				height: 13px;
+				width: 13px;
+				border: 0;
+				border-radius: 50%;
+				background: #0fccce;
+				cursor: pointer;
+			}
+			.lf-progress::-ms-track {
+				width: 100%;
+				height: 3px;
+				cursor: pointer;
+				background: transparent;
+				border-color: transparent;
+				color: transparent;
+			}
+			.lf-progress::-ms-fill-lower {
+				background: #ccc;
+				border-radius: 3px;
+			}
+			.lf-progress::-ms-fill-upper {
+				background: #ccc;
+				border-radius: 3px;
+			}
+			.lf-progress::-ms-thumb {
+				border: 0;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				background: #0fccce;
+				cursor: pointer;
+			}
+			.lf-progress:focus::-ms-fill-lower {
+				background: #ccc;
+			}
+			.lf-progress:focus::-ms-fill-upper {
+				background: #ccc;
+			}
+			.lf-player-container :focus {
+				outline: 0;
+			}
+			.lf-popover {
+				position: relative;
+			}
+
+			.lf-popover-content {
+				display: inline-block;
+				position: absolute;
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, -10px);
+				box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+				transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+			}
+
+			.lf-popover-content.hidden {
+				opacity: 0;
+				visibility: hidden;
+				transform: translate(0, 0px);
+			}
+
+			.lf-player-btn-container {
+				display: flex;
+				align-items: center;
+			}
+			.lf-player-btn {
+				cursor: pointer;
+				fill: #999;
+				width: 14px;
+			}
+
+			.lf-player-btn.active {
+				fill: #555;
+			}
+
+			.lf-popover {
+				position: relative;
+			}
+
+			.lf-popover-content {
+				display: inline-block;
+				position: absolute;
+				background-color: #ffffff;
+				opacity: 1;
+
+				transform: translate(0, -10px);
+				box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+				transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+				padding: 10px;
+			}
+
+			.lf-popover-content.hidden {
+				opacity: 0;
+				visibility: hidden;
+				transform: translate(0, 0px);
+			}
+
+			.lf-arrow {
+				position: absolute;
+				z-index: -1;
+				content: "";
+				bottom: -9px;
+				border-style: solid;
+				border-width: 10px 10px 0px 10px;
+			}
+
+			.lf-left-align,
+			.lf-left-align .lfarrow {
+				left: 0;
+				right: unset;
+			}
+
+			.lf-right-align,
+			.lf-right-align .lf-arrow {
+				right: 0;
+				left: unset;
+			}
+
+			.lf-text-input {
+				border: 1px #ccc solid;
+				border-radius: 5px;
+				padding: 3px;
+				width: 60px;
+				margin: 0;
+			}
+
+			.lf-color-picker {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				height: 90px;
+			}
+
+			.lf-color-selectors {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.lf-color-component {
+				display: flex;
+				flex-direction: row;
+				font-size: 12px;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.lf-color-component strong {
+				width: 40px;
+			}
+
+			.lf-color-component input[type="range"] {
+				margin: 0 0 0 10px;
+			}
+
+			.lf-color-component input[type="number"] {
+				width: 50px;
+				margin: 0 0 0 10px;
+			}
+
+			.lf-color-preview {
+				font-size: 12px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 5px;
+			}
+
+			.lf-preview {
+				height: 60px;
+				width: 60px;
+			}
+
+			.lf-popover-snapshot {
+				width: 150px;
+			}
+			.lf-popover-snapshot h5 {
+				margin: 5px 0 10px 0;
+				font-size: 0.75rem;
+			}
+			.lf-popover-snapshot a {
+				display: block;
+				text-decoration: none;
+			}
+			.lf-popover-snapshot a:before {
+				content: "⥼";
+				margin-right: 5px;
+			}
+			.lf-popover-snapshot .lf-note {
+				display: block;
+				margin-top: 10px;
+				color: #999;
+			}
+			.lf-player-controls > div {
+				margin-right: 5px;
+				margin-left: 5px;
+			}
+			.lf-player-controls > div:first-child {
+				margin-left: 0px;
+			}
+			.lf-player-controls > div:last-child {
+				margin-right: 0px;
+			}
+		</style>
 	</head>
-	<body data-new-gr-c-s-check-loaded="14.1136.0" data-gr-ext-installed="" style="background-color: white;">
+	<body
+		class="bg-wight"
+		data-new-gr-c-s-check-loaded="14.1147.0"
+		data-gr-ext-installed=""
+	>
 		<div class="eg-preloder" style="display: none"></div>
 
 		<header class="header-area style-2">
@@ -183,7 +421,13 @@
 									<li>
 										<a href="register.html">Register</a>
 									</li>
-									<li><a class="active" href="batch-creation.html">Batch</a></li>
+									<li>
+										<a
+											class="active"
+											href="batch-creation.html"
+											>Batch</a
+										>
+									</li>
 								</ul>
 							</li>
 							<li class="menu-item-has-children">
@@ -670,6 +914,7 @@
 				</div>
 			</div>
 		</header>
+
 		<div class="inner-banner">
 			<div class="container">
 				<div class="row">
@@ -695,10 +940,8 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="job-post-area pt-120 mb-120"
-			style="background-color: white"
-		>
+
+		<div class="job-post-area pt-120 mb-120">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -707,7 +950,9 @@
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="section-title2">
-											<h5>Batch Information to Create:</h5>
+											<h5>
+												Batch Information to Create:
+											</h5>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -731,13 +976,15 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-inner mb-25">
-											<label>Technology*</label>
+											<label for="jobtitle"
+												>Technology*</label
+											>
 											<div class="input-area">
 												<img
-													src="assets/images/icon/category-2.svg"
+													src="assets/images/icon/company-2.svg "
 													alt=""
 												/>
-                                                <input
+												<input
 													type="text"
 													id="jobtitle"
 													name="jobtitle"
@@ -818,16 +1065,23 @@
 													type="text"
 													id="experiences"
 													name="experiences"
-													placeholder="Type Prerequisites"
+													placeholder="Prerequisites"
 												/>
 											</div>
 										</div>
 									</div>
-                                    <div class="col-md-12">
-                                        <div class="form-inner mb-30">
-                                            <label for="summernote1">Preresources (if any):</label>
-                                            <textarea placeholder="Write about preresources.........."></textarea>                                        </div>
-                                    </div>
+									<div class="col-md-12">
+										<div class="form-inner mb-30">
+											<label
+												>Preresources (if any):</label
+											>
+											<textarea
+												name="editordata"
+												placeholder="Write Preresources (if any)"
+											></textarea>
+										</div>
+									</div>
+									<div class="col-md-12">
 										<div
 											class="form-agreement form-inner d-flex justify-content-between flex-wrap"
 										>
@@ -837,8 +1091,8 @@
 													id="html"
 												/>
 												<label for="html"
-													>Here, I accepted batch
-													creation terms &amp;
+													>Here, I accepted company
+													terms &amp;
 													conditions.</label
 												>
 											</div>
@@ -848,18 +1102,28 @@
 										<div class="form-inner">
 											<button
 												class="primry-btn-2 lg-btn w-unset"
-												type="submit" onclick="checkPrerequisites()"
+												type="submit"
+												onclick="checkPrerequisites()"
 											>
 												Create Batch Now
 											</button>
-										</div><br>
-										<div id="registrationButton" style="display: none;">
+										</div>
+										<br />
+										<div
+											id="registrationButton"
+											style="display: none"
+										>
 											<div class="col-md-12">
 												<div class="form-inner">
-													<button class="primry-btn-2 lg-btn w-unset" type="button" onclick="registerForBatch()">Register</button>
+													<button
+														class="primry-btn-2 lg-btn w-unset"
+														type="button"
+														onclick="registerForBatch()"
+													>
+														Register
+													</button>
 												</div>
 											</div>
-										</div>
 										</div>
 									</div>
 								</div>
@@ -868,264 +1132,275 @@
 					</div>
 				</div>
 			</div>
-			<footer class="footer1">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div
-							class="col-lg-3 col-md-4 col-sm-6 mb--50 d-flex justify-content-sm-start justify-content-center"
-						>
-							<div class="footer-widget">
-								<div class="widget-title">
-									<h5>About Company</h5>
-								</div>
-								<div class="menu-container">
-									<ul>
-										<li>
-											<a href="contact.html"
-												>Contact Us
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="#"
-												>Terms & Condition
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="#"
-												>Privacy & Policy
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="#"
-												>Candidate Listing
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-									</ul>
-								</div>
+		</div>
+
+		<footer class="footer1">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div
+						class="col-lg-3 col-md-4 col-sm-6 mb--50 d-flex justify-content-sm-start justify-content-center"
+					>
+						<div class="footer-widget">
+							<div class="widget-title">
+								<h5>About Company</h5>
 							</div>
-						</div>
-						<div
-							class="col-lg-3 col-md-4 col-sm-6 mb--50 d-flex justify-content-md-center justify-content-sm-end justify-content-center"
-						>
-							<div class="footer-widget">
-								<div class="widget-title">
-									<h5>For Candidate’s</h5>
-								</div>
-								<div class="menu-container">
-									<ul>
-										<li>
-											<a href="edit-profile.html"
-												>Create Resume
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="category.html"
-												>Browse Categories
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="bookmark.html"
-												>Save Jobs List
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="job-listing1.html"
-												>Browse Jobs
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="dashboard.html"
-												>Candidate Dashboard
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div
-							class="col-lg-3 col-md-4 col-sm-6 mb--50 d-flex justify-content-lg-center justify-content-md-end justify-content-sm-start justify-content-center"
-						>
-							<div class="footer-widget">
-								<div class="widget-title">
-									<h5>For Employer’s</h5>
-								</div>
-								<div class="menu-container">
-									<ul>
-										<li>
-											<a href="job-post.html"
-												>Post A Job
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="#"
-												>Browse Candidates
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="pricing-plan.html"
-												>Job Packages
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="job-listing1.html"
-												>Jobs Featured
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-										<li>
-											<a href="company-dashboard.html"
-												>Employer Dashboard
-												<i class="bx bx-up-arrow-alt"></i
-											></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div
-							class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-end justify-content-center"
-						>
-							<div class="footer-widget four">
-								<div class="widget-title">
-									<h5>Download App</h5>
-								</div>
-								<div class="app-list">
-									<ul>
-										<li>
-											<a href="#"
-												><img
-													src="assets/images/icon/apple-app.svg"
-													alt
-											/></a>
-										</li>
-										<li>
-											<a href="#"
-												><img
-													src="assets/images/icon/google-play.svg"
-													alt
-											/></a>
-										</li>
-									</ul>
-								</div>
+							<div class="menu-container">
+								<ul>
+									<li>
+										<a href="contact.html"
+											>Contact Us
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											>Terms &amp; Condition
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											>Privacy &amp; Policy
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											>Candidate Listing
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="footer-btm">
-						<div class="footer-logo">
-							<img src="assets/images/footer-logo.svg" alt />
+					<div
+						class="col-lg-3 col-md-4 col-sm-6 mb--50 d-flex justify-content-md-center justify-content-sm-end justify-content-center"
+					>
+						<div class="footer-widget">
+							<div class="widget-title">
+								<h5>For Candidate’s</h5>
+							</div>
+							<div class="menu-container">
+								<ul>
+									<li>
+										<a href="edit-profile.html"
+											>Create Resume
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="category.html"
+											>Browse Categories
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="bookmark.html"
+											>Save Jobs List
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="job-listing1.html"
+											>Browse Jobs
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="dashboard.html"
+											>Candidate Dashboard
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div class="row align-items-center">
-							<div
-								class="col-lg-6 d-flex justify-content-lg-start justify-content-center"
-							>
-								<div class="support">
-									<div class="icon">
-										<img
-											src="assets/images/icon/footer-support-icon.svg"
-											alt
-										/>
-									</div>
-									<div class="content">
-										<h5>Support Line:</h5>
-										<a href="tel:+099-03573983465"
-											>+099-035 7398 3465</a
-										>
-									</div>
-								</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-4 col-sm-6 mb--50 d-flex justify-content-lg-center justify-content-md-end justify-content-sm-start justify-content-center"
+					>
+						<div class="footer-widget">
+							<div class="widget-title">
+								<h5>For Employer’s</h5>
 							</div>
-							<div
-								class="col-lg-6 d-flex justify-content-lg-end justify-content-center"
-							>
-								<div class="footer-btm-menu">
-									<ul>
-										<li><a href="#">Privacy Policy</a></li>
-										<li><a href="#">Terms of Services</a></li>
-										<li>
-											<a
-												href="https://www.google.com/maps/place/Egens+Lab/@23.8340712,90.3634979,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c14c8682a473:0xa6c74743d52adb88!8m2!3d23.8340663!4d90.3656866"
-												>Our Sitemap</a
-											>
-										</li>
-									</ul>
-								</div>
+							<div class="menu-container">
+								<ul>
+									<li>
+										<a href="job-post.html"
+											>Post A Job
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="#"
+											>Browse Candidates
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="pricing-plan.html"
+											>Job Packages
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="job-listing1.html"
+											>Jobs Featured
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+									<li>
+										<a href="company-dashboard.html"
+											>Employer Dashboard
+											<i class="bx bx-up-arrow-alt"></i
+										></a>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="row border-top align-items-center">
-							<div
-								class="col-lg-6 d-flex justify-content-lg-start justify-content-center"
-							>
-								<div class="copyright-area">
-									<p>
-										©Copyright 2023 <a href="#">JOBES</a> |
-										Design By
-										<a href="https://www.egenslab.com/"
-											>Egenslab</a
-										>
-									</p>
-								</div>
+					</div>
+					<div
+						class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-end justify-content-center"
+					>
+						<div class="footer-widget four">
+							<div class="widget-title">
+								<h5>Download App</h5>
 							</div>
-							<div
-								class="col-lg-6 d-flex justify-content-lg-end justify-content-center"
-							>
-								<div class="social-area">
-									<h6>Follow JOBES:</h6>
-									<ul>
-										<li>
-											<a href="https://www.facebook.com/"
-												><i class="bx bxl-facebook"></i
-											></a>
-										</li>
-										<li>
-											<a href="https://twitter.com/"
-												><i class="bx bxl-twitter"></i
-											></a>
-										</li>
-										<li>
-											<a href="https://www.linkedin.com/"
-												><i class="bx bxl-linkedin"></i
-											></a>
-										</li>
-										<li>
-											<a href="https://www.instagram.com/"
-												><i class="bx bxl-instagram"></i
-											></a>
-										</li>
-									</ul>
-								</div>
+							<div class="app-list">
+								<ul>
+									<li>
+										<a href="#"
+											><img
+												src="assets/images/icon/apple-app.svg"
+												alt=""
+										/></a>
+									</li>
+									<li>
+										<a href="#"
+											><img
+												src="assets/images/icon/google-play.svg"
+												alt=""
+										/></a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-		<script>
-			function checkPrerequisites() {
-				// Implement logic to check prerequisites here
-				var prerequisitesMet = true;
-		
-				if (prerequisitesMet) {
-					showRegistrationPopup();
-				} else {
-					alert("Prerequisites not met. Cannot register for the batch.");
-				}
-			}
-		
-			function showRegistrationPopup() {
-				var registrationPopup = document.getElementById("registrationPopup");
-				registrationPopup.style.display = "block";
-			}
-		</script>
-		
+				<div class="footer-btm">
+					<div class="footer-logo">
+						<img src="assets/images/footer-logo.svg" alt="" />
+					</div>
+					<div class="row align-items-center">
+						<div
+							class="col-lg-6 d-flex justify-content-lg-start justify-content-center"
+						>
+							<div class="support">
+								<div class="icon">
+									<img
+										src="assets/images/icon/footer-support-icon.svg"
+										alt=""
+									/>
+								</div>
+								<div class="content">
+									<h5>Support Line:</h5>
+									<a href="tel:+099-03573983465"
+										>+099-035 7398 3465</a
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-lg-6 d-flex justify-content-lg-end justify-content-center"
+						>
+							<div class="footer-btm-menu">
+								<ul>
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Terms of Services</a></li>
+									<li>
+										<a
+											href="https://www.google.com/maps/place/Egens+Lab/@23.8340712,90.3634979,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c14c8682a473:0xa6c74743d52adb88!8m2!3d23.8340663!4d90.3656866"
+											>Our Sitemap</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row border-top align-items-center">
+						<div
+							class="col-lg-6 d-flex justify-content-lg-start justify-content-center"
+						>
+							<div class="copyright-area">
+								<p>
+									©Copyright 2023 <a href="#">JOBES</a> |
+									Design By
+									<a href="https://www.egenslab.com/"
+										>Egenslab</a
+									>
+								</p>
+							</div>
+						</div>
+						<div
+							class="col-lg-6 d-flex justify-content-lg-end justify-content-center"
+						>
+							<div class="social-area">
+								<h6>Follow JOBES:</h6>
+								<ul>
+									<li>
+										<a href="https://www.facebook.com/"
+											><i class="bx bxl-facebook"></i
+										></a>
+									</li>
+									<li>
+										<a href="https://twitter.com/"
+											><i class="bx bxl-twitter"></i
+										></a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/"
+											><i class="bx bxl-linkedin"></i
+										></a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/"
+											><i class="bx bxl-instagram"></i
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/jquery-ui.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="assets/js/jquery.nice-select.js"></script>
+		<script src="assets/js/jquery.fancybox.min.js"></script>
+		<script src="assets/js/slick.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/summernote.min.js"></script>
+		<script src="assets/js/jquery.waypoints.min.js"></script>
+		<script src="assets/js/counterup.js"></script>
+		<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/viewport.jquery.js"></script>
+		<script src="assets/js/jquery.nice-number.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<div
+			id="ui-datepicker-div"
+			class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
+		></div>
 	</body>
+	<grammarly-desktop-integration
+		data-grammarly-shadow-root="true"
+	></grammarly-desktop-integration>
 </html>
