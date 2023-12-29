@@ -848,10 +848,18 @@
 										<div class="form-inner">
 											<button
 												class="primry-btn-2 lg-btn w-unset"
-												type="submit"
+												type="submit" onclick="checkPrerequisites()"
 											>
 												Create Batch Now
 											</button>
+										</div><br>
+										<div id="registrationButton" style="display: none;">
+											<div class="col-md-12">
+												<div class="form-inner">
+													<button class="primry-btn-2 lg-btn w-unset" type="button" onclick="registerForBatch()">Register</button>
+												</div>
+											</div>
+										</div>
 										</div>
 									</div>
 								</div>
@@ -859,7 +867,7 @@
 						</div>
 					</div>
 				</div>
-		</div>
+			</div>
 		<footer class="footer1">
 			<div class="container">
 				<div class="row justify-content-center">
@@ -1102,5 +1110,23 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+			function checkPrerequisites() {
+				// Implement logic to check prerequisites here
+				var prerequisitesMet = true;
+		
+				if (prerequisitesMet) {
+					showRegistrationPopup();
+				} else {
+					alert("Prerequisites not met. Cannot register for the batch.");
+				}
+			}
+		
+			function showRegistrationPopup() {
+				var registrationPopup = document.getElementById("registrationPopup");
+				registrationPopup.style.display = "block";
+			}
+		</script>
+		
 	</body>
 </html>
