@@ -10,7 +10,7 @@
 
     <!-- Your existing stylesheet links -->
     <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/box.css">
+    <link rel="stylesheet" href="assets/cssbox.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- ... (other stylesheets) ... -->
 
@@ -76,20 +76,20 @@
         </div>
 
     </header>
-    <h3>Please Select Your Required<span style="color: rgb(41, 130, 209);">Option </span><span
-            style="color: rgb(249, 247, 244);"></span>Below</h3>
+    <h3><span style="color: rgb(41, 130, 209);"></span><span
+            style="color: rgb(249, 247, 244);"></span></h3>
 
-    <div class="layout">
-        <div class="button-box">
-            <a href="job.html" class="seven">
-                <button>Job</button>
-            </a>
-        </div>
-        <div class="layout">
-            <div class="button-box">
-                <a href="internship.html" class="seven" background-color: #04AA6D>
-                    <button>Internship</button>
-                </a>
+            <div id="outer">
+                <div class="inner">
+                    <form action="job-post.html" target="_blank">
+                        <button type="submit"><i class="fa fa-file-text-o"></i> Job</button>
+                    </form>
+                </div>
+                <div class="inner">
+                    <form action="internship.html" target="_blank">
+                        <button type="submit"><i class="fa fa-file-text-o"></i>Internship</button>
+                    </form>
+                </div>
             </div>
             <!-- Footer -->
 
