@@ -3109,8 +3109,8 @@ header.style-2
 	li
 	.notifications-area.show
 	.notifacation-icon {
-	background-color: rgba(0, 167, 172, 0.2);
-	border-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
+	border-color: rgba(112, 48, 160, 0.2);
 }
 
 header.style-2
@@ -3372,7 +3372,6 @@ header.style-2 .main-menu ul > li:hover > ul.sub-menu {
 header.style-2 .main-menu ul > li::before {
 	content: url(../images/icon/menu-active.svg);
 	position: absolute;
-	top: -11px;
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
@@ -7224,7 +7223,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .home1-category .single-category .category-top .sl-no h6 {
 	font-size: 1.125rem;
 	font-weight: 700;
-	color: rgba(0, 167, 172, 0.2);
+	color: rgba(112, 48, 160, 0.2);
 	font-family: var(--font-exo2);
 	line-height: 22px;
 	letter-spacing: 0.04em;
@@ -7236,7 +7235,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	height: 1px;
 	width: 40px;
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	left: -50px;
 	top: 50%;
@@ -7289,7 +7288,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	height: 100%;
 	width: 3px;
-	background: rgba(0, 167, 172, 0.25);
+	background: rgba(112, 48, 160, 0.25);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -7982,7 +7981,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .home1-top-recruiters .recruters-card {
 	background: #fff;
 	border-radius: 5px;
-	border: 1px solid rgba(0, 167, 172, 0.25);
+	border: 1px solid rgba(112, 48, 160, 0.25);
 	transition: 0.35s;
 }
 
@@ -8958,7 +8957,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	height: 7px;
 	width: 7px;
 	border-radius: 50%;
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	right: -70px;
 	top: 50%;
@@ -8989,7 +8988,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	height: 13px;
 	width: 13px;
 	border-radius: 50%;
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	position: absolute;
 	left: -3px;
 	top: -3px;
@@ -9009,7 +9008,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 	right: -200px;
 }
 
@@ -10228,7 +10227,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 
 .login-area .form-wrapper nav .nav-tabs .nav-link {
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	border-radius: 50px;
 	padding: 3px 43px;
 	font-family: var(--font-work-sans);
@@ -10301,7 +10300,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 
 .register-area .form-wrapper .register-tab nav .nav-tabs .nav-link {
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	border-radius: 50px;
 	padding: 3px 43px;
 	font-family: var(--font-work-sans);
@@ -10885,7 +10884,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	align-items: center;
 	white-space: nowrap;
 	gap: 8px;
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	border-radius: 5px;
 	transition: 0.35s;
 	padding: 15px 24px;
@@ -11140,7 +11139,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .table-wrapper .right-site .nice-select .option:hover,
 .table-wrapper .right-site .nice-select .option.focus,
 .table-wrapper .right-site .nice-select .option.selected.focus {
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 }
 
 .table-wrapper .right-site .filter-area {
@@ -11236,7 +11235,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	.select-area
 	.nice-select
 	.option.selected.focus {
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 }
 
 .table-wrapper .right-site .filter-area span {
@@ -11355,7 +11354,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .table-wrapper .filter-wrapper .right-site .nice-select .option:hover,
 .table-wrapper .filter-wrapper .right-site .nice-select .option.focus,
 .table-wrapper .filter-wrapper .right-site .nice-select .option.selected.focus {
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 }
 
 .table-wrapper .title-and-btn {
@@ -11416,7 +11415,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 
 .table-wrapper .scroll-table::-webkit-scrollbar-track {
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	border-radius: 10px;
 }
 
@@ -12857,7 +12856,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	width: 120px;
 	position: absolute;
 	top: 10px;
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 	right: -135px;
 }
 
@@ -12894,7 +12893,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	height: 7px;
 	width: 7px;
 	border-radius: 50%;
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	right: -83px;
 	top: 7px;
@@ -12934,7 +12933,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	height: 13px;
 	width: 13px;
 	border-radius: 50%;
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	position: absolute;
 	left: -3px;
 	top: -3px;
@@ -13170,7 +13169,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	font-weight: 600;
 	font-size: 0.875rem;
 	color: var(--primary-color1);
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	padding: 4px 24px;
 	position: relative;
 	z-index: 1;
@@ -13260,7 +13259,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	width: 7px;
 	margin: 0 auto;
 	border-radius: 50%;
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	text-align: center;
 	position: relative;
 }
@@ -13269,7 +13268,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	width: 67px;
 	height: 1px;
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	left: 15px;
 	top: 50%;
@@ -13280,7 +13279,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	width: 67px;
 	height: 1px;
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	right: 15px;
 	top: 50%;
@@ -13558,7 +13557,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 
 .job-sidebar .job-widget.style-1 ul::-webkit-scrollbar-track {
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	border-radius: 10px;
 }
 
@@ -13781,7 +13780,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .grid-select-area .nice-select .option:hover,
 .grid-select-area .nice-select .option.focus,
 .grid-select-area .nice-select .option.selected.focus {
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 }
 
 .grid-select-area .grid-area ul {
@@ -13898,7 +13897,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .job-listing-wrrap .grid-select-area .nice-select .option:hover,
 .job-listing-wrrap .grid-select-area .nice-select .option.focus,
 .job-listing-wrrap .grid-select-area .nice-select .option.selected.focus {
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 }
 
 .job-listing-wrrap .grid-select-area .grid-area ul {
@@ -14006,7 +14005,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .company-listing-wrap .grid-select-area .nice-select .option:hover,
 .company-listing-wrap .grid-select-area .nice-select .option.focus,
 .company-listing-wrap .grid-select-area .nice-select .option.selected.focus {
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 }
 
 .company-listing-wrap .grid-select-area .grid-area ul {
@@ -15176,7 +15175,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	height: 100%;
 	width: 3px;
-	background: rgba(0, 167, 172, 0.25);
+	background: rgba(112, 48, 160, 0.25);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -17380,7 +17379,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	height: 13px;
 	width: 13px;
 	border-radius: 50%;
-	border: 1px solid rgba(0, 167, 172, 0.25);
+	border: 1px solid rgba(112, 48, 160, 0.25);
 	position: absolute;
 	left: -3px;
 	top: -3px;
@@ -17431,7 +17430,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	height: 13px;
 	width: 13px;
 	border-radius: 50%;
-	border: 1px solid rgba(0, 167, 172, 0.25);
+	border: 1px solid rgba(112, 48, 160, 0.25);
 	position: absolute;
 	left: -3px;
 	top: -3px;
@@ -17724,7 +17723,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	width: 82px;
 	height: 73px;
 	background: #f8f8f8;
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
@@ -17823,7 +17822,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	width: 82px;
 	height: 73px;
 	background: #f8f8f8;
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
@@ -18855,7 +18854,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .pricing-plan-area
 	.pricing-plan-card2
 	.scrolling-wrapper::-webkit-scrollbar-track {
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	border-radius: 10px;
 }
 
@@ -19305,7 +19304,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 .category-listing-area .single-category .category-top .sl-no h6 {
 	font-size: 1.125rem;
 	font-weight: 700;
-	color: rgba(0, 167, 172, 0.2);
+	color: rgba(112, 48, 160, 0.2);
 	font-family: var(--font-exo2);
 	line-height: 22px;
 	letter-spacing: 0.04em;
@@ -19317,7 +19316,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	height: 1px;
 	width: 40px;
-	background-color: rgba(0, 167, 172, 0.2);
+	background-color: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	left: -50px;
 	top: 50%;
@@ -19898,7 +19897,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	font-weight: 500;
 	font-size: 1rem;
 	color: var(--title-color1);
-	border: 1px solid rgba(0, 167, 172, 0.2);
+	border: 1px solid rgba(112, 48, 160, 0.2);
 	border-radius: 50px;
 	background-color: transparent;
 	padding: 5px 18px;
@@ -21775,7 +21774,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 	content: "";
 	width: 4px;
 	height: 100%;
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -23080,7 +23079,7 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 
 .home4-category-area .job-category-card2 .cart-front {
 	border: 1px solid;
-	border-color: rgba(0, 167, 172, 0.2);
+	border-color: rgba(112, 48, 160, 0.2);
 	border-radius: 50px;
 	padding: 45px 20px;
 	text-align: center;
@@ -29269,13 +29268,13 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 
 .range-wrap .noUi-background {
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	height: 8px;
 	border-radius: 10px;
 }
 
 .range-wrap .noUi-connect {
-	background: rgba(0, 167, 172, 0.2);
+	background: rgba(112, 48, 160, 0.2);
 	transition: background 450ms;
 	border-radius: 10px;
 	height: 8px;
