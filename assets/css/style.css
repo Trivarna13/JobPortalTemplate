@@ -3372,6 +3372,7 @@ header.style-2 .main-menu ul > li:hover > ul.sub-menu {
 header.style-2 .main-menu ul > li::before {
 	content: url(../images/icon/menu-active.svg);
 	position: absolute;
+	top: -11px;
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
